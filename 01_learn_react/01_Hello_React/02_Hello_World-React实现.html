@@ -12,11 +12,17 @@
 
   <div id="app"></div>
 
+  <!-- React 核心代码 -->
+  <!-- crossorigin 将远程的错误信息打印到本地 -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <!-- React 渲染到不同的平台 这里是浏览器 ReactDOM -->
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- 将 jsx 转换成 React 代码的工具 -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- 默认在 script 标签无法使用 jsx 必须添加 type="text/babel" -->
   <script type="text/babel">
     let message = "Hello World!";
+    // render 参数 1. 渲染的内容 2. 挂载的元素
     ReactDOM.render(<h2>{message}</h2>, document.getElementById("app"))
   </script>
 </body>
