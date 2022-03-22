@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * 面向对象三大特性：封装 继承 多态
+     */
+
+    class Person {
+      constructor(name) {
+        this.name = name;
+      }
+      running() {
+        console.log(this.name, "running");
+      }
+    }
+
+    // 继承 Person
+    class Student extends Person {
+      constructor(name, sno) {
+        super(name);
+        this.sno = sno;
+      }
+    }
+
+    const stu = new Student("stu1", "001");
+    stu.running();
+
+
+  </script>
+</body>
+
+</html>
