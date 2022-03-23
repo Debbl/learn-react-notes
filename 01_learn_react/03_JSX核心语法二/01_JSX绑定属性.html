@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      color: red;
+    }
+
+    .active {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    // 切割图片尺寸
+    function getSizeImage(imgUrl, size) {
+      return imgUrl + `?s=${size}`;
+    }
+
+    class App extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          title: "标题",
+          imgUrl: "https://avatars.githubusercontent.com/u/61053131",
+          aboutLink: "https://aiwan.run/",
+          divClassName: "box",
+          active: false,
+        }
+      }
+      render() {
+        return (
+          <div>
+            {/* 1. JSX 绑定属性 属性={} */}
+            <h2 title={this.state.title}>我是标题</h2>
+            <img src={getSizeImage(this.state.imgUrl, 40)} alt="avatar" />
+            <a href={this.state.aboutLink} target="_blank">About</a>
+
+            {/* 2. class 与类的定义关键字 重复 这里使用 className */}
+            <div className={this.state.divClassName}>我是DIV元素</div>
+            {/* 动态添加类名 */}
+            <div className={"title" + (this.state.active ? "active" : "")}>动态与元素类名</div>
+            <div className={"title" + (this.state.active && "active")}>动态与元素类名</div>
+            {/* for => htmlFor */}
+            <label htmlFor="username">Click me</label>
+            <input type="text" id="username" />
+
+            {/* 3. 绑定 Style */}
+            {/* {{}} 传给 Style 的是一个 对象， 注意对象 的 key 和 value */}
+            <div style={{ color: "green", fontSize: "50px" }}>绑定Style属性</div>
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(<App />, document.getElementById("app"));
+
+  </script>
+</body>
+
+</html>
