@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          names: ['abc', 'cba', 'nba'],
+        }
+      }
+
+      render() {
+        return (
+          <div>
+            <h2>App</h2>
+            <h2>名字列表</h2>
+            {/* 数组的高阶函数 1. map 2. filter 3. slice */}
+            <ul>
+              {this.state.names
+              .filter(item => item === 'abc')
+              .map(item =>
+                <li key={item}>{item}</li>
+              )}
+            </ul>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
+</body>
+
+</html>
