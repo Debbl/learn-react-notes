@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script type="text/babel">
+    /**
+     * babel 将 JSX 语法转成 React.createElement() 表示 如 El2
+     * JSX -> Babel -> React.createElement()
+     * React.createElement() 参数
+     * 1. 标签名
+     * 2. 属性
+     * 3. 内容
+     * ** 这里可以传多个参数（多于三个）其他的参数通过 函数的 arguments 获取
+    */
+    const El1 = <h2>Hello</h2>;
+    const El2 = React.createElement("h2", { title: "标题" }, "Hello-el2");
+    ReactDOM.render(El2, document.getElementById("app"));
+  </script>
+</body>
+
+</html>
