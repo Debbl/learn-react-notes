@@ -45,3 +45,5 @@ class App extends React.Component {
 ```jsx
 <button onClick={() => this.handleClick()}>按钮</button>
 ```
+
+## React 的设计原则 state 中的数据是不可变的

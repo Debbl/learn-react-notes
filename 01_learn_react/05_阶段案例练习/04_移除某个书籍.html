@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      border: 1px solid #eee;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      text-align: center;
+      border: 1px solid #000;
+      padding: 5px 10px;
+    }
+
+    .count {
+      margin: auto 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+
+  <script src="./format_util.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          books: [
+            {
+              id: 1,
+              name: '《算法导论》',
+              date: '2006-9',
+              price: 85.00,
+              count: 1
+            },
+            {
+              id: 2,
+              name: '《UNIX编程艺术》',
+              date: '2006-2',
+              price: 59.00,
+              count: 1
+            },
+            {
+              id: 3,
+              name: '《编程珠玑》',
+              date: '2008-10',
+              price: 39.00,
+              count: 1
+            },
+            {
+              id: 4,
+              name: '《代码大全》',
+              date: '2006-3',
+              price: 128.00,
+              count: 1
+            },
+          ]
+        }
+      }
+
+      getTotalPrice() {
+        const totalPrice = this.state.books
+          .reduce((preValue, item) =>
+            preValue + (item.price * item.count), 0);
+        return formatPrice(totalPrice);
+      }
+
+      removeBook(index) {
+        // React 的设计原则 state 中的数据是不可变的
+        // ** 这里数组的 filter 返回的是一个新的数组
+        return this.setState({
+          books: this.state.books.filter((item, indey) => indey != index)
+        });
+      }
+
+
+      render() {
+        return this.state.books.length ? (
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>书籍名称</th>
+                  <th>出版日期</th>
+                  <th>价格</th>
+                  <th>购买日期</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.books.map((item, index) => (
+                  <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.date}</td>
+                    <td>{formatPrice(item.price)}</td>
+                    <td>
+                      <button>-</button>
+                      <span className="count">{item.count}</span>
+                      <button>+</button>
+                    </td>
+                    <td><button onClick={() => this.removeBook(index)}>移除</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <h2>总价格为：{this.getTotalPrice()}</h2>
+          </div>
+        ) : (<h2>购物车为空~</h2>)
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
+</body>
+
+</html>
