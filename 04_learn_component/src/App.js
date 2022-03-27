@@ -7,6 +7,7 @@ import App0303 from './03_组件间的通信/03_父传子通信-函数组件';
 import App0304 from './03_组件间的通信/04_父传子通信-属性验证';
 import App0305 from './03_组件间的通信/05_子传父通信-函数传递';
 import App0401 from './04_组件通信案例/App';
+import App0501 from './05_React实现slot/App';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <App0305 />
       <h1>04_组件通信案例</h1>
       <App0401 />
+      <h1>05_React实现slot</h1>
+      <App0501 />
     </div>
   );
 }
