@@ -41,8 +41,8 @@ export function App0101() {
 export function App0102() {
   // return 123;
   return [
-    <div>hello1</div>,
-    <div>hello2</div>
+    <div key={1}>hello1</div>,
+    <div key={2}>hello2</div>
   ]
 }
 
