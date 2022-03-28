@@ -17,6 +17,11 @@ import App0702 from './07_setState的使用/02_setState是异步更新';
 import App0703 from './07_setState的使用/03_setState是同步更新';
 import App0704 from './07_setState的使用/04_setState数据的合并';
 import App0705 from './07_setState的使用/05_setState本身的合并';
+import App0801 from './08_React性能优化/01_列表中key的作用';
+import App0802 from './08_React性能优化/02_组件嵌套的render调用';
+import App0803 from './08_React性能优化/03_shouldComponentUpdate';
+import App0804 from './08_React性能优化/04_PureComponent';
+import App0805 from './08_React性能优化/05_React.memo';
 
 function App() {
   return (
@@ -47,7 +52,13 @@ function App() {
       {/* <App0702 /> */}
       {/* <App0703 /> */}
       {/* <App0704 /> */}
-      <App0705 />
+      {/* <App0705 /> */}
+      <h1>08_React性能优化</h1>
+      {/* <App0801 /> */}
+      {/* <App0802 /> */}
+      {/* <App0803 /> */}
+      {/* <App0804 /> */}
+      <App0805 />
     </div>
   );
 }

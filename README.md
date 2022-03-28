@@ -135,3 +135,7 @@ this.setState((preState, props) => {
 })
 ```
 
+## 8. React 性能优化
+
+- key
+- PureComponet/React.memo() 的 shallowEqual 浅层比较
