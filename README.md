@@ -66,3 +66,72 @@ class App extends React.Component {
 
 ## 5. 组件间的通信
 
+## 6. 跨组件通信
+
+### Props
+
+### Contenxt
+
+## 7. setState的使用
+
+### 如何获取异步的结果
+
+> this.setState({}, callback)
+
+```javascript
+this.setState({
+  message: "Hello React",
+}, () => {
+  console.log(this.state.message);
+})
+```
+
+```javascript
+componentDidMount() {
+  console.log(this.state.message);
+}
+```
+
+- 在组件生命周期或React合成事件中，setState是**异步**； 
+- 在setTimeout或者原生dom事件中，setState是**同步**；
+
+### 数据合并
+
+> Object.assign()
+
+### 本身的合并，异步的关系
+
+```javascript
+// 1. setState 本身的合并
+this.setState({
+    counter: this.state.counter + 1,
+})
+this.setState({
+    counter: this.state.counter + 1,
+})
+this.setState({
+    counter: this.state.counter + 1,
+})
+```
+
+> 解决方案
+
+```javascript
+this.setState((preState, props) => {
+  console.log(props);
+  return  {
+    counter: preState.counter + 1
+  }
+})
+this.setState((preState, props) => {
+  return  {
+    counter: preState.counter + 1
+  }
+})
+this.setState((preState, props) => {
+  return  {
+    counter: preState.counter + 1
+  }
+})
+```
+

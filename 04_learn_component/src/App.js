@@ -12,6 +12,11 @@ import App0601 from './06_跨组件通信/01_跨组件通信-props';
 import App0602 from './06_跨组件通信/02_跨组件通信-context';
 import App0603 from './06_跨组件通信/03_跨组件通信-context-函数组件';
 import App0604 from './06_跨组件通信/04_跨组件通信-多个context';
+import App0701 from './07_setState的使用/01_为什么使用setState';
+import App0702 from './07_setState的使用/02_setState是异步更新';
+import App0703 from './07_setState的使用/03_setState是同步更新';
+import App0704 from './07_setState的使用/04_setState数据的合并';
+import App0705 from './07_setState的使用/05_setState本身的合并';
 
 function App() {
   return (
@@ -36,7 +41,13 @@ function App() {
       {/* <App0601 /> */}
       {/* <App0602 /> */}
       {/* <App0603 /> */}
-      <App0604 />
+      {/* <App0604 /> */}
+      <h1>07_setState的使用</h1>
+      {/* <App0701 /> */}
+      {/* <App0702 /> */}
+      {/* <App0703 /> */}
+      {/* <App0704 /> */}
+      <App0705 />
     </div>
   );
 }
