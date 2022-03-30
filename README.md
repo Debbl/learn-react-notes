@@ -72,6 +72,8 @@ class App extends React.Component {
 
 ### Contenxt
 
+### Events
+
 ## 7. setState的使用
 
 ### 如何获取异步的结果
@@ -139,3 +141,18 @@ this.setState((preState, props) => {
 
 - key
 - PureComponet/React.memo() 的 shallowEqual 浅层比较
+
+### setState 不可变的力量
+
+- 有利于 shouldComponentUpdate 优化
+
+## 9. ref 受控组件和非受控组件
+
+### ref
+
+- 字符串
+- 对象
+- 函数
+
+> forwordRef
+

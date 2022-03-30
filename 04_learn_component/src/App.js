@@ -22,6 +22,9 @@ import App0802 from './08_React性能优化/02_组件嵌套的render调用';
 import App0803 from './08_React性能优化/03_shouldComponentUpdate';
 import App0804 from './08_React性能优化/04_PureComponent';
 import App0805 from './08_React性能优化/05_React.memo';
+import App0901 from './09_前面知识点的补充/01_setState不可变的力量';
+import App0902 from './09_前面知识点的补充/02_全局事件的传递';
+import App1001 from './10_受控和非受控组件/01_refs的使用';
 
 function App() {
   return (
@@ -58,7 +61,12 @@ function App() {
       {/* <App0802 /> */}
       {/* <App0803 /> */}
       {/* <App0804 /> */}
-      <App0805 />
+      {/* <App0805 /> */}
+      <h1>09_前面知识点的补充</h1>
+      {/* <App0901 /> */}
+      {/* <App0902 /> */}
+      <h1>10_ref和受控和非受控组件</h1>
+      <App1001 />
     </div>
   );
 }
