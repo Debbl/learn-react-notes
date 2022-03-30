@@ -25,6 +25,10 @@ import App0805 from './08_React性能优化/05_React.memo';
 import App0901 from './09_前面知识点的补充/01_setState不可变的力量';
 import App0902 from './09_前面知识点的补充/02_全局事件的传递';
 import App1001 from './10_受控和非受控组件/01_refs的使用';
+import App1002 from './10_受控和非受控组件/02_受控组件的基本使用';
+import App1003 from './10_受控和非受控组件/03_受控组件-select的使用';
+import App1004 from './10_受控和非受控组件/04_受控组件-input多输入';
+import App1005 from './10_受控和非受控组件/05_非受控组件的使用';
 
 function App() {
   return (
@@ -66,7 +70,11 @@ function App() {
       {/* <App0901 /> */}
       {/* <App0902 /> */}
       <h1>10_ref和受控和非受控组件</h1>
-      <App1001 />
+      {/* <App1001 /> */}
+      {/* <App1002 /> */}
+      {/* <App1003 /> */}
+      {/* <App1004 /> */}
+      <App1005 />
     </div>
   );
 }

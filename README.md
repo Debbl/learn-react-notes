@@ -156,3 +156,8 @@ this.setState((preState, props) => {
 
 > forwordRef
 
+### 受控组件
+
+> 所有会改变的数据都应该放在 state 里
+
+- 单项数据流
