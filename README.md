@@ -161,3 +161,11 @@ this.setState((preState, props) => {
 > 所有会改变的数据都应该放在 state 里
 
 - 单项数据流
+
+## 10. 高阶组件
+
+- 增强 Props
+- 登录鉴权
+- 生命周期劫持
+- redux connect
+- react router 的 withRouter
