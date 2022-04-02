@@ -36,6 +36,10 @@ import App1104 from './11_高阶组件的使用/04_高阶组件的应用-增强p
 import App1105 from './11_高阶组件的使用/05_高阶组件应用-登录鉴权操作';
 import App1106 from './11_高阶组件的使用/06_高阶组件的应用-生命周期的劫持-默认';
 import App1107 from './11_高阶组件的使用/07_高阶组件的应用-生命周期的劫持-增强';
+import App1201 from './12_组件内容补充/01_ref的转发';
+import App1202 from './12_组件内容补充/02_portals的使用';
+import App1203 from './12_组件内容补充/03_fragments的使用';
+import App1204 from './12_组件内容补充/04_strictMode的使用';
 
 function App() {
   return (
@@ -89,7 +93,12 @@ function App() {
       {/* <App1104 /> */}
       {/* <App1105 /> */}
       {/* <App1106 /> */}
-      <App1107 />
+      {/* <App1107 /> */}
+      <h1>12_组件内容补充</h1>
+      {/* <App1201 /> */}
+      {/* <App1202 /> */}
+      {/* <App1203 /> */}
+      <App1204 />
     </div>
   );
 }
