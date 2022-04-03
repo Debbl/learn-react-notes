@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.less';
 import App02 from './antdesign/App';
 import App01 from './classnams/App';
 
