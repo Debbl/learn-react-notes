@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.less';
-import App02 from './antdesign/App';
+import App02 from '@/antdesign/App';
 import App01 from './classnams/App';
 
 export default function App() {
