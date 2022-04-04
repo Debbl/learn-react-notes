@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import 'moment/locale/zh-cn';
 import CommentInput from './components/CommentInput';
 import CommentItem from './components/CommentItem';
 
