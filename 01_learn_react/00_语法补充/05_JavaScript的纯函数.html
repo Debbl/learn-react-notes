@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 是纯函数
+    function sum(num1, num2) {
+      return num1 + num2;
+    }
+    sum(20, 30);
+
+    let foo = 10;
+    // 不是纯函数
+    function add(num) {
+      return foo + num;
+    }
+    add(5);
+    foo = 6;
+    add(6);
+    // 改写成纯函数, const 不可以改变
+    const bar = 10;
+    function add2(num) {
+      return bar + num;
+    }
+
+    const baz = { count: 10 };
+    // 不是纯函数, count 可以改变
+    function add3(num) {
+      return baz.count + num;
+    }
+
+    // 有争议， 打印的话
+    function printInfo(info) {
+      console.log(info.name, info.age);
+    }
+  </script>
+</body>
+
+</html>
