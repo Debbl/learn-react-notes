@@ -189,6 +189,20 @@ yarn add classnames
 ## 14. React-transition-group
 
 - Transition
-- CSSTransition
+
+- CSSTransition'
+
+  > 三种状态
+
+  - -appear、-appear-active、-appear-done
+  - -enter、-enter-active、-enter-done
+  - -exit、-exit-active、-exite-done
+
 - SwitchTransition
 - TransitionGroup
+
+## 15. redux
+
+- reducer
+- store
+- action
