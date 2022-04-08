@@ -1,4 +1,11 @@
-import { ADD_NUMBER, DECREMENT, INCREMENT, SUB_NUMBER } from './constants';
+import {
+  ADD_NUMBER,
+  CHANGE_BANNERS,
+  CHANGE_RECOMMEND,
+  DECREMENT,
+  INCREMENT,
+  SUB_NUMBER,
+} from './constants';
 
 const incAction = () => ({
   type: INCREMENT,
@@ -18,4 +25,22 @@ const subAction = (num) => ({
   num,
 });
 
-export { incAction, decAction, addAction, subAction };
+// 轮播图 和 推荐 action
+const changeBannersAction = (banners) => ({
+  type: CHANGE_BANNERS,
+  banners,
+});
+
+const changeRecommendsAction = (recommends) => ({
+  type: CHANGE_RECOMMEND,
+  recommends,
+});
+
+export {
+  incAction,
+  decAction,
+  addAction,
+  subAction,
+  changeBannersAction,
+  changeRecommendsAction,
+};
