@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // function foo() {
+    //   console.log("foo被执行");
+    // }
+    // foo();
+
+    // generator 生成器
+    // 会返回一个迭代器
+    function* foo() {
+      console.log("111");
+      yield 1;
+      console.log("222");
+      yield 2;
+      console.log("333");
+      yield 3;
+      console.log("444");
+    }
+    const result = foo();
+    // 调用一次 next 就会消耗一次迭代器
+    console.log(result.next()); // 调用迭代器的 next 方法
+    console.log(result.next());
+    console.log(result.next());
+    console.log(result.next());
+
+
+    // 依次生成 1-10 数字
+    function* generatorNumber() {
+      for (let i = 1; i <= 10; i++) {
+        yield i;
+      }
+    }
+    const numIt = generatorNumber();
+    console.log(numIt.next());
+    console.log(numIt.next());
+    console.log(numIt.next());
+    console.log(numIt.next());
+
+    // generator 和 Promise 一起使用
+    function* bar() {
+      const result = yield new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Hello Generator");
+        }, 3000);
+      })
+      console.log(result);
+    }
+
+    const iterator = bar();
+    iterator.next().value.then((res) => {
+      iterator.next(res);
+    })
+  </script>
+</body>
+
+</html>
