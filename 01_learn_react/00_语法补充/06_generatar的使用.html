@@ -61,6 +61,9 @@
     iterator.next().value.then((res) => {
       iterator.next(res);
     })
+
+    // redux 中的 reducer 和数组的 reducer 又相似的地方
+    ["abc", "cba"].reduce((preValue, item) => {}, 0)
   </script>
 </body>
 
