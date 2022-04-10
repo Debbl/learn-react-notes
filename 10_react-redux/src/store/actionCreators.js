@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   ADD_NUMBER,
   CHANGE_BANNERS,
@@ -36,6 +37,18 @@ const changeRecommendsAction = (recommends) => ({
   recommends,
 });
 
+// redux-thunk
+const getHomeMultiDataAction = (dispatch, getState) => {
+  console.log(getState(), '原来的state');
+  axios({
+    url: 'http://123.207.32.32:8000/home/multidata',
+  }).then((res) => {
+    const data = res.data.data;
+    dispatch(changeBannersAction(data.banner.list));
+    dispatch(changeRecommendsAction(data.recommend.list));
+  });
+};
+
 export {
   incAction,
   decAction,
@@ -43,4 +56,5 @@ export {
   subAction,
   changeBannersAction,
   changeRecommendsAction,
+  getHomeMultiDataAction,
 };
