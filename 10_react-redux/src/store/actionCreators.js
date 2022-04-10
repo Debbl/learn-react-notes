@@ -4,6 +4,7 @@ import {
   CHANGE_BANNERS,
   CHANGE_RECOMMEND,
   DECREMENT,
+  FETCH_HOME_MULTIDATA,
   INCREMENT,
   SUB_NUMBER,
 } from './constants';
@@ -49,6 +50,11 @@ const getHomeMultiDataAction = (dispatch, getState) => {
   });
 };
 
+// redux-saga 拦截的 action
+const fetchHomeMultiDataAction = {
+  type: FETCH_HOME_MULTIDATA,
+};
+
 export {
   incAction,
   decAction,
@@ -57,4 +63,5 @@ export {
   changeBannersAction,
   changeRecommendsAction,
   getHomeMultiDataAction,
+  fetchHomeMultiDataAction,
 };

@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Home2 from './pages/home2';
 import Home3 from './pages/home3';
 import Home4 from './pages/home4';
+import Home5Saga from './pages/home5-saga';
 
 export default function App() {
   return (
@@ -19,7 +20,9 @@ export default function App() {
       <h2>官方的</h2>
       {/* <About3 /> */}
       <h2>redux-thunk</h2>
-      <Home4 />
+      {/* <Home4 /> */}
+      <h2>redux-saga</h2>
+      <Home5Saga />
     </div>
   );
 }
