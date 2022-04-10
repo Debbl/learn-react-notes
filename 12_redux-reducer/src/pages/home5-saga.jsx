@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react';
-import {
-  addAction,
-  fetchHomeMultiDataAction,
-  incAction,
-} from '../store/actionCreators';
+import { fetchHomeMultiDataAction } from '../store/home/actionCreators';
+import { addAction, incAction } from '../store/counter/actionCreators';
 // import { connect } from '../utils/connect';
 import { connect } from 'react-redux';
 
@@ -39,9 +36,9 @@ class Home5 extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-  counter: state.counter,
-  banners: state.banners,
-  recommends: state.recommends,
+  counter: state.counterInfo.counter,
+  banners: state.homeInfo.banners,
+  recommends: state.homeInfo.recommends,
 });
 
 const mapDispatchToProps = (dispatch) => ({
