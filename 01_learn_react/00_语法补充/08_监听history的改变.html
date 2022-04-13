@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <a href="/home">首页</a>
+    <a href="/about">关于</a>
+    <div class="router-view"></div>
+  </div>
+  <script>
+    // 获取路由显示元素
+    const routerView = document.getElementsByClassName("router-view")[0];
+
+    // 去除 a元素 的默认行为 （发送请求）
+    const aEls = document.getElementsByTagName("a");
+    for (let aEl of aEls) {
+      aEl.addEventListener("click", (e) => {
+        e.preventDefault();
+        // 后去路由跳转参数
+        const aHref = aEl.getAttribute("href");
+        history.pushState({}, "", aHref);
+        urlChange();
+      })
+    }
+
+    // 执行后退历史，依然使用 urlChange 来处理
+    window.addEventListener("popstate", urlChange);
+    // window.addEventListener("go", urlChange);
+
+    function urlChange() {
+      console.log(location.pathname);
+      switch (location.pathname) {
+        case "/home":
+          routerView.innerHTML = "HOME";
+          break;
+        case "/about":
+          routerView.innerHTML = "ABOUT";
+          break;
+        default:
+          routerView.innerHTML = "";
+      }
+    }
+  </script>
+</body>
+
+</html>
