@@ -1,6 +1,10 @@
 import { INCREMENT, DECREMENT, ADD_NUMBER, SUB_NUMBER } from './constants';
 
-function counterReducer(state, action) {
+const initialState = {
+  counter: 0,
+};
+
+function counterReducer(state = initialState, action) {
   switch (action.type) {
     case INCREMENT:
       return { ...state, counter: state.counter + 1 };
