@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Routes, Route, NavLink, Outlet } from 'react-router-dom';
+import { Routes, Route, NavLink, Outlet, useNavigate } from 'react-router-dom';
 
 export function History() {
   return (
@@ -22,21 +22,26 @@ export function Connect() {
     </>
   );
 }
-export default class About extends PureComponent {
-  render() {
-    return (
-      <div>
-        <h2>About</h2>
-        <NavLink to={'history'}>企业历史</NavLink>
-        <NavLink to={'culture'}>企业文化</NavLink>
-        <NavLink to={'connect'}>联系我们</NavLink>
-
-        <Routes>
-          <Route path="/history" element={<History />} />
-          <Route path="culture" element={<Culture />} />
-          <Route path="connect" element={<Connect />} />
-        </Routes>
-      </div>
-    );
-  }
+export default function About() {
+  const navigate = useNavigate();
+  return (
+    <div>
+      <h2>About</h2>
+      <NavLink to={'history'}>企业历史</NavLink>
+      <NavLink to={'culture'}>企业文化</NavLink>
+      <NavLink to={'connect'}>联系我们</NavLink>
+      <button
+        onClick={() => {
+          navigate('connect');
+        }}
+      >
+        加入我们
+      </button>
+      <Routes>
+        <Route path="/history" element={<History />} />
+        <Route path="culture" element={<Culture />} />
+        <Route path="connect" element={<Connect />} />
+      </Routes>
+    </div>
+  );
 }
