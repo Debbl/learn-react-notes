@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Profile from './pages/profile';
 import User from './pages/User';
 import { History, Culture, Connect } from './pages/about';
+import Detail from './pages/Detail';
 export default class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -49,6 +50,7 @@ export default class App extends PureComponent {
         <NavLink to={'/about'}>关于</NavLink>
         <NavLink to={'/profile'}>我的</NavLink>
         <NavLink to={'/user'}>用户</NavLink>
+        <NavLink to={'/detail'}>详情</NavLink>
         <Routes>
           <Route index element={<h2>默认显示</h2>}></Route>
           <Route path="/home" element={<Home />} />
@@ -56,6 +58,9 @@ export default class App extends PureComponent {
           <Route path="/profile" element={<Profile />} />
           <Route path="/user" element={<User />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/detail" element={<Detail />}>
+            <Route path=":id" element={<Detail />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     );
