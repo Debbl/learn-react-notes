@@ -212,3 +212,9 @@ yarn add classnames
 - 可以把网络请求放在 redux 里面在更新数据，直接封装一层，组件只关心派发 action 来操作数据。
 - 默认在 redux 中不支持异步请求。
 - 可以使用中间件。
+
+## 16. React-router
+
+- hash
+- history
+
