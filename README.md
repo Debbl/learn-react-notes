@@ -221,3 +221,5 @@ yarn add classnames
 ## 17. React-Hooks
 
 - `useState()`
+
+state 更新的值要不一样， React 内部会做优化，复杂值（如数组）一样会导致组件不会重新渲染。
