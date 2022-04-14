@@ -1,9 +1,11 @@
 import React from 'react';
-import { Outlet, useParams } from 'react-router';
+import { Outlet, useLocation, useParams } from 'react-router';
 
 export default function Detail() {
   const params = useParams();
+  const location = useLocation();
   console.log(params);
+  console.log(location);
   return (
     <div>
       <h2>Detail</h2>

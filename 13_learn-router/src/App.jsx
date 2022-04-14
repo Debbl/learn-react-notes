@@ -51,6 +51,12 @@ export default class App extends PureComponent {
         <NavLink to={'/profile'}>我的</NavLink>
         <NavLink to={'/user'}>用户</NavLink>
         <NavLink to={'/detail'}>详情</NavLink>
+        <NavLink
+          to={'/detail?name=debbl&age=18'}
+          state={{ name: 'foo', age: 19 }}
+        >
+          详情
+        </NavLink>
         <Routes>
           <Route index element={<h2>默认显示</h2>}></Route>
           <Route path="/home" element={<Home />} />
