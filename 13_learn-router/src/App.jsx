@@ -14,6 +14,7 @@ import Profile from './pages/profile';
 import User from './pages/User';
 import { History, Culture, Connect } from './pages/about';
 import Detail from './pages/Detail';
+import AppRouters from './router/routers';
 export default class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -68,6 +69,7 @@ export default class App extends PureComponent {
             <Route path=":id" element={<Detail />} />
           </Route>
         </Routes>
+        <AppRouters />
       </BrowserRouter>
     );
   }
