@@ -1,4 +1,4 @@
-import React, { useCallback, useState, memo } from 'react';
+import React, { useCallback, useState, memo, useMemo } from 'react';
 /**
  * 改变 show 的值，btn1 会渲染，btn2 不会渲染
  */
@@ -23,6 +23,13 @@ export default function CallbackHookDemo02() {
     console.log('执行函数 useCallback');
     // count 闭包
     setCount(count + 1);
+  }, [count]);
+  const increment3 = useMemo(() => {
+    return () => {
+      console.log('执行函数 useCallback');
+      // count 闭包
+      setCount(count + 1);
+    };
   }, [count]);
   return (
     <div>
