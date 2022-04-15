@@ -223,3 +223,11 @@ yarn add classnames
 - `useState()`
 
 state 更新的值要不一样， React 内部会做优化，复杂值（如数组）一样会导致组件不会重新渲染。
+
+- `useEffect()`
+  - 不传第二个参数，`componentDidMount() componentDidUpdate()`
+  - return 一个函数，`componentWillUnmount()`, 有区别
+
+模仿组件的生命周期。
+
+- `useContext()`
