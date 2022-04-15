@@ -8,6 +8,8 @@ import CounterHookChange from './03_useEffect使用/02_hook实现title的修改'
 import EffectHookCancelDome from './03_useEffect使用/03_useEffect模拟订阅和取消订阅';
 import MultiEffectHookDemo from './03_useEffect使用/04_多个useEffect一起使用';
 import ContextHookDemo from './04_useContext使用/01_useContext的使用';
+import Home from './05_useReducer使用/home';
+import Profile from './05_useReducer使用/profile';
 
 export const UserContext = createContext();
 export const ThemeContext = createContext();
@@ -31,11 +33,14 @@ export default function App() {
       {/* <MultiEffectHookDemo /> */}
       <button onClick={() => setShow(!show)}>切换</button>
       <h1>6. useContext()的使用</h1>
-      <UserContext.Provider value={{ name: 'debbl', age: 18 }}>
+      {/* <UserContext.Provider value={{ name: 'debbl', age: 18 }}>
         <ThemeContext.Provider value={{ fontSize: '30px', color: 'red' }}>
           <ContextHookDemo />
         </ThemeContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      <h1>7. useReducer()的使用</h1>
+      <Home />
+      <Profile />
     </div>
   );
 }
