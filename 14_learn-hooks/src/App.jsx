@@ -12,6 +12,8 @@ import Home from './05_useReducer使用/home';
 import Profile from './05_useReducer使用/profile';
 import CallbackHookDemo01 from './06_useCallback使用/01_useCallback不能进行的性能优化';
 import CallbackHookDemo02 from './06_useCallback使用/02_useCallback进行的性能优化';
+import MemoHookDemo01 from './07_useMemo使用/01_useMemo复杂计算的应用';
+import MemoHookDemo02 from './07_useMemo使用/02_useMemo传入子组件应用类型';
 
 export const UserContext = createContext();
 export const ThemeContext = createContext();
@@ -44,8 +46,11 @@ export default function App() {
       {/* <Home />
       <Profile /> */}
       <h1>8. useCallback()的使用</h1>
-      <CallbackHookDemo01 />
-      <CallbackHookDemo02 />
+      {/* <CallbackHookDemo01 />
+      <CallbackHookDemo02 /> */}
+      <h1>9. useMemo()的使用</h1>
+      {/* <MemoHookDemo01 /> */}
+      <MemoHookDemo02 />
     </div>
   );
 }
