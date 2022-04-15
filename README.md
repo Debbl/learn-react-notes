@@ -233,3 +233,7 @@ yarn add classnames
 - `useContext()`
 - `useReducer()` 是 `useState()` 的替代品
   - 多个 `reducer` 不可以共享里面的数据
+- `useCallback()` 进行性能优化的
+  - 函数返回一个 memoized 的值
+  - 函数依赖不变，多次定义返回相同的值
+  - **用在将组件中的一个函数传给一个子组件使用**，避免子组件的 props 中的函数值会重新定义获得的是一个不一样的值，没有很好的优化，重复渲染

@@ -10,6 +10,8 @@ import MultiEffectHookDemo from './03_useEffect使用/04_多个useEffect一起�
 import ContextHookDemo from './04_useContext使用/01_useContext的使用';
 import Home from './05_useReducer使用/home';
 import Profile from './05_useReducer使用/profile';
+import CallbackHookDemo01 from './06_useCallback使用/01_useCallback不能进行的性能优化';
+import CallbackHookDemo02 from './06_useCallback使用/02_useCallback进行的性能优化';
 
 export const UserContext = createContext();
 export const ThemeContext = createContext();
@@ -39,8 +41,11 @@ export default function App() {
         </ThemeContext.Provider>
       </UserContext.Provider> */}
       <h1>7. useReducer()的使用</h1>
-      <Home />
-      <Profile />
+      {/* <Home />
+      <Profile /> */}
+      <h1>8. useCallback()的使用</h1>
+      <CallbackHookDemo01 />
+      <CallbackHookDemo02 />
     </div>
   );
 }
