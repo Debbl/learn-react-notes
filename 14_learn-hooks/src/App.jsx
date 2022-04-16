@@ -23,6 +23,7 @@ import LayoutEffectCounterDemo from './10_useLayoutEffect/02_useLayoutEffect的c
 import CustomLifeHookDemo from './11_自定义Hook/01_认识自定义Hook';
 import CustomContextShareHook from './11_自定义Hook/02_自定义Hook的练习-Context共享';
 import CustomScrollPositionHook from './11_自定义Hook/03_自定义Hook的练习-获取滚动位置';
+import CustomDataStoreHook from './11_自定义Hook/04_自定义hook练习-localStorage存储';
 
 export const UserContext = createContext();
 export const ThemeContext = createContext();
@@ -82,7 +83,9 @@ export default function App() {
         </ThemeContext.Provider>
       </UserContext.Provider> */}
       <h2>获取滚动位置</h2>
-      <CustomScrollPositionHook />
+      {/* <CustomScrollPositionHook /> */}
+      <h2>localStorage</h2>
+      <CustomDataStoreHook />
     </div>
   );
 }
