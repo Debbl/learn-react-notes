@@ -223,14 +223,12 @@ yarn add classnames
 
 - `useState()`
   - state 更新的值要不一样， React 内部会做优化，复杂值（如数组）一样会导致组件不会重新渲染。
-
 - `useEffect()`
 
   - 不传第二个参数，`componentDidMount() componentDidUpdate()`
   - return 一个函数，`componentWillUnmount()`, 有区别
 
   - 模仿组件的生命周期。
-
 - `useContext()`
 - `useReducer()` 是 `useState()` 的替代品
   - 多个 `reducer` 不可以共享里面的数据
@@ -240,3 +238,13 @@ yarn add classnames
   - **用在将组件中的一个函数传给一个子组件使用**，避免子组件的 props 中的函数值会重新定义获得的是一个不一样的值，没有很好的优化，重复渲染
 - `useMemo()` 
   - 返回一个 memoized 的值
+- `useRef()`
+  - 返回一个`ref`对象，这个对象在组件的整个生命周期保持不变，初始赋值
+  - 用法
+    - 引入 `DOM`
+    - 保存数据，在组件的整个生命周期保持不变
+- `useImperativeHandle()`
+  - 自定义暴露给父组件的`ref` 属性
+- `useLayoutEffect()`
+  - useEffect会在渲染的内容更新到DOM上后执行，不会阻塞DOM的更新
+  - useLayoutEffect会在渲染的内容更新到DOM上之前执行，**会阻塞DOM的更新**；
