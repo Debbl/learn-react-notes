@@ -61,6 +61,7 @@ class App extends React.Component {
 ### React内部为了告诉我们当前处于哪些阶段，会对我们组件内部实现的某些函数进行回调，这些函数就是生命周期函数：
 
 - 比如实现`componentDidMount`函数：组件已经挂载到DOM上时，就会回调；
+- `shouldComponentUpdate` 组件即将更新，可以做一些优化，`memo`
 - 比如实现`componentDidUpdate`函数：组件已经发生了更新时，就会回调；
 - 比如实现`componentWillUnmount`函数：组件即将被移除时，就会回调；
 
