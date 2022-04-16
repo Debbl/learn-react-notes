@@ -20,9 +20,13 @@ import ForwardRefDemo from './09_useImperativeHandel/01_回顾forwardRef的用�
 import ImperativeHandelDemo from './09_useImperativeHandel/02_useImperativeHandel用法';
 import EffectCounterDemo from './10_useLayoutEffect/01_useEffect的count修改';
 import LayoutEffectCounterDemo from './10_useLayoutEffect/02_useLayoutEffect的count修改';
+import CustomLifeHookDemo from './11_自定义Hook/01_认识自定义Hook';
+import CustomContextShareHook from './11_自定义Hook/02_自定义Hook的练习-Context共享';
+import CustomScrollPositionHook from './11_自定义Hook/03_自定义Hook的练习-获取滚动位置';
 
 export const UserContext = createContext();
 export const ThemeContext = createContext();
+export const TokenContext = createContext();
 
 export default function App() {
   const [show, setShow] = useState(true);
@@ -64,8 +68,21 @@ export default function App() {
       {/* <ForwardRefDemo /> */}
       {/* <ImperativeHandelDemo /> */}
       <h1>12. useLayoutEffect()使用</h1>
-      <EffectCounterDemo />
-      <LayoutEffectCounterDemo />
+      {/* <EffectCounterDemo />
+      <LayoutEffectCounterDemo /> */}
+      <h1>13. 自定义 Hook</h1>
+      {/* {show && <CustomLifeHookDemo />}
+      <button onClick={() => setShow(!show)}>{!show ? 'show' : 'hidden'}</button> */}
+      <h2>共享 Context</h2>
+      {/* <UserContext.Provider value={{ name: 'debbl', age: 18 }}>
+        <ThemeContext.Provider value={{ color: 'red' }}>
+          <TokenContext.Provider value={{ token: '112233' }}>
+            <CustomContextShareHook />
+          </TokenContext.Provider>
+        </ThemeContext.Provider>
+      </UserContext.Provider> */}
+      <h2>获取滚动位置</h2>
+      <CustomScrollPositionHook />
     </div>
   );
 }

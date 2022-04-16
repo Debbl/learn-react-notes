@@ -248,3 +248,5 @@ yarn add classnames
 - `useLayoutEffect()`
   - useEffect会在渲染的内容更新到DOM上后执行，不会阻塞DOM的更新
   - useLayoutEffect会在渲染的内容更新到DOM上之前执行，**会阻塞DOM的更新**；
+- 自定义 Hook
+  - 以`use` 开头
