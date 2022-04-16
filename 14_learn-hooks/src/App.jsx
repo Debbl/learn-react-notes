@@ -14,6 +14,10 @@ import CallbackHookDemo01 from './06_useCallback使用/01_useCallback不能进�
 import CallbackHookDemo02 from './06_useCallback使用/02_useCallback进行的性能优化';
 import MemoHookDemo01 from './07_useMemo使用/01_useMemo复杂计算的应用';
 import MemoHookDemo02 from './07_useMemo使用/02_useMemo传入子组件应用类型';
+import RefHookDemo01 from './08_useRef使用/01_useRef引入DOM';
+import RefHookDemo02 from './08_useRef使用/02_useRef引用其他数据';
+import ForwardRefDemo from './09_useImperativeHandel/01_回顾forwardRef的用法';
+import ImperativeHandelDemo from './09_useImperativeHandel/02_useImperativeHandel用法';
 
 export const UserContext = createContext();
 export const ThemeContext = createContext();
@@ -50,7 +54,13 @@ export default function App() {
       <CallbackHookDemo02 /> */}
       <h1>9. useMemo()的使用</h1>
       {/* <MemoHookDemo01 /> */}
-      <MemoHookDemo02 />
+      {/* <MemoHookDemo02 /> */}
+      <h1>10. useRef()的使用</h1>
+      {/* <RefHookDemo01 /> */}
+      {/* <RefHookDemo02 /> */}
+      <h1>11. useImperativeHandel()使用</h1>
+      {/* <ForwardRefDemo /> */}
+      <ImperativeHandelDemo />
     </div>
   );
 }
